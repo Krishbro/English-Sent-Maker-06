@@ -51,7 +51,7 @@ const sentence = sentences[currentSentence];
 const english = sentence.english;
 const selected = selectedWords.join(' ');
 if (selected === english) {
-document.querySelector('.result').textContent = 'Correct!';
+document.querySelector('.result').textContent = 'Correct! ✔';
 document.querySelector('.result').style.color = '#4CAF50';
 currentSentence++;
 if (currentSentence === sentences.length) {
@@ -64,7 +64,7 @@ document.querySelector('.congrats').style.display = 'block';
 setTimeout(newSentence, 1000);
 }
 } else {
-document.querySelector('.result').textContent = 'Incorrect, please try again.';
+document.querySelector('.result').textContent = 'Incorrect ✖, please try again.';
 document.querySelector('.result').style.color = '#FF0000';
 selectedWords = [];
 shuffledWords.forEach(word => {
